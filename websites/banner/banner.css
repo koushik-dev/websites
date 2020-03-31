@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #e3eeee;
+}
+header {
+    background-color: #ffffff;
+    box-shadow: 0 5px 10px #8e8e8e;
+}
+header .header-container {
+    line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    font-weight: 900;
+    letter-spacing: 1px;
+    background: #ffffff;
+}
+header .header-container li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+header .ham-menu {
+    position: relative;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: none;
+    float: right;
+}
+header .ham-menu span {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #868686;
+    transition: all 0.25s ease-in;
+}
+header .ham-menu span:nth-child(1) {
+    top: 30%;
+}
+header .ham-menu span:nth-child(2) {
+    top: 50%;
+}
+header .ham-menu span:nth-child(3) {
+    top: 50%;
+}
+header .ham-menu span:nth-child(4) {
+    top: 70%;
+}
+header .ham-menu.active span {
+    background-color: red;
+}
+
+header .ham-menu.active span:nth-child(4) {
+    transform: scale(0);
+}
+header .ham-menu.active span:nth-child(3) {
+    transform: rotate(-135deg) scale(0.9);
+}
+header .ham-menu.active span:nth-child(2) {
+    transform: rotate(135deg) scale(0.9);
+}
+header .ham-menu.active span:nth-child(1) {
+    transform: scale(0);
+}
+
+.img-container {
+    padding: 50px;
+    position: relative;
+    height: 70vh;
+}
+
+.img-container .image {
+    transition: all 2s ease-in;
+    background-image: url('./images/elephant.jpg');
+    background-position: center;
+    margin: auto;
+    background-size: cover;
+    height: 100%;
+    border: 20px solid #7a9ba2;
+}
+.img-container h1 {
+    font-size: 42px;
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    color: white;
+}
+.jumbotron {
+    font-size: 42px;
+    letter-spacing: 1px;
+    color: darkcyan;
+    padding: 20px 0;
+    text-align: center;
+    display: none;
+}
+
+.svg {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.svg svg {
+    width: 500px;
+    height: 500px;
+    transform: rotateY(180deg);
+}
+
+.svg .card {
+    margin: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 50px;
+    max-height: 150px;
+    flex: 1;
+}
+
+.svg #Leaves, .svg #small_Leaf {
+    animation: shake 0.2s linear alternate infinite;
+}
+.undraw-container {
+    margin-bottom: 100px;
+}
+
+footer {
+    background-color: #000000;
+    height: 50vh;
+    padding: 20px 20px 10px;
+    position: relative;
+}
+footer p {
+    color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+    white-space: nowrap;
+
+}
+footer .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    min-height: 200px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #ffffff;
+    position: relative;
+    top: -120px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes shake {
+    from {
+        transform: translateY(-5px);
+    }
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jumbotron {
+        display: block;
+    }
+    header {
+        padding: 20px;
+        height: 100%;
+        width: 200px;
+        position: absolute;
+        right: 0;
+        background: transparent;
+        box-shadow: none;
+        z-index: 2;
+    }
+    header .header-container {
+        height: 100%;
+        box-sizing: border-box;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        flex-direction: column;
+        transition: all 0.5s ease-in;
+        overflow: hidden;
+        box-shadow: 0 5px 10px #8e8e8e;
+        width: 0;
+        padding: 100px 0 20px;
+        opacity: 0;
+    }
+    header .header-container li {
+        margin: 10px 0;
+    }
+    header .ham-menu {
+        display: block;
+    }
+    header .header-container.active {
+        padding: 100px 20px 20px;
+        opacity: 1;
+        width: 100%;
+    }
+
+    .img-container h1 {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        color: #000;
+    }
+    .undraw-container {
+        margin-top: 100px;
+    }
+
+    .svg {
+        flex-direction: column-reverse;
+    }
+
+    .svg .card {
+        max-height: max-content;
+    }
+
+    .svg svg {
+        width: 300px;
+        height: 300px;
+    }
+}
