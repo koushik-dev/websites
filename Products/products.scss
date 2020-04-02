@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    font-family: 'Poppins', sans-serif;
+    .parent-container {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        .down-arrow {
+            color: #d3d3d3;
+            position: fixed;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            bottom: 10px;
+            border: 2px solid #777777;
+            border-radius: 50px;
+            padding: 2px 7px;
+            font-size: 30px;
+            cursor: pointer;
+            animation: float 1s ease-in-out infinite;
+        }
+        .bg-img {
+            filter: drop-shadow(0px 0px 5px black);
+            background-image: url('images/phone.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 400px;
+            width: 270px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .left-pane {
+            flex: 1 50%;
+            min-height: 100vh;
+            padding: 20px 100px;
+            background-color: white;
+            header {
+                min-height: 100px;
+            }
+            .title {
+                letter-spacing: 2px;
+                font-size: 48px;
+                margin: 10px 0;
+                color: #232534;
+            }
+            .content {
+                margin: 30px 0;
+                font-size: 12px;
+                color: #b3b5bb;
+            }
+        }
+        .right-pane1 {
+            flex: 1 50%;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px 50px 20px 150px;
+            background-color: white;
+            .card {
+                min-height: 250px;
+                min-width: 400px;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0px 0px 5px 5px #777777;
+                padding: 30px;
+                text-align: center;
+                img {
+                    width: 200px;
+                }
+                .title {
+                    font-size: 14px;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        .right-pane {
+            flex: 1 50%;
+            min-height: 100vh;
+            background-color: #ffe454;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                height: 90vh;
+            }
+        }
+
+        .left-pane1 {
+            flex: 1 50%;
+            min-height: 100vh;
+            background-color: #54ffe7;
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        bottom: 0%
+    }
+    50% {
+        bottom: 2%;
+    }
+    100% {
+        bottom: 0%
+    }
+}
