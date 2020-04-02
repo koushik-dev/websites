@@ -1,0 +1,151 @@
+$yellow-color: #f2bf33;
+$gray-color: #92886b;
+$yellowish-white: #fbecc0;
+$text-color: white;
+$mont-font: 'Montserrat', sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    color: $text-color;
+    font-family: 'Ubuntu', sans-serif;
+    .hero {
+        height: max-content;
+        &_inner {
+            min-height: 100vh;
+            height: 100%;
+            background-color: $yellow-color;
+            display: flex;
+            padding: 20px;
+            &_rightPane {
+                flex: 1 50%;
+                background-image: url("images/web.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: right;
+            }
+            &_content {
+                flex: 1 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                padding: 20px;
+                &_title{
+                    margin: 20px 0;
+                    font-size: 36px;
+                }
+                &_heading {
+                    color: currentColor;
+                    font-family: $mont-font;
+                    font-size: 36px;
+                    letter-spacing: 1px;
+                    margin: 20px 0;
+                }
+                &_subheading {
+                    font-family: $mont-font;
+                }
+                &_button {
+                    background-color: $text-color;
+                    mix-blend-mode: screen;
+                    border-radius: 50px;
+                    border: 0;
+                    width: 220px;
+                    padding: 10px 0;
+                    font-weight: 900;
+                    margin: 20px 0 0;
+                    font-family: inherit;
+                    font-size: 28px;
+                    outline: none;
+                }
+            }
+        }
+    }
+    .products {
+        min-height: 100vh;
+        background-color: $text-color;
+        position: relative;
+        height: max-content;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-image: linear-gradient(to bottom, $text-color 50%, $yellow-color 50%);
+        &_card {
+            height: 400px;
+            width: 250px;
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px;
+            position: relative;
+            box-shadow: 5px 5px 10px $gray-color;
+            background-image: linear-gradient(to bottom, $yellow-color 50%, $text-color 50%);
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            &:hover {
+                justify-content: center;
+                background-image: linear-gradient(to bottom, $text-color 50%, $text-color 50%);
+                .products_card_img {
+                    flex: 0;
+                }
+            }
+            &_img {
+                background-image: url("images/reaper.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                flex: 1;
+            }
+            &_title {
+                font-weight: 900;
+                text-align: center;
+                margin: 0 0 10px;
+                color: black;
+                font-size: 28px;
+            }
+            &_description {
+                color: black;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        .hero {
+            padding: 10px;
+            &_inner {
+                flex-direction: column;
+                padding: 0;
+                &_rightPane {
+                    min-height: 300px;
+                    margin-top: 20px;
+                }
+                &_content {
+                    text-align: center;
+                    &_title{
+                    }
+                    &_heading {
+                        font-size: 28px;
+                    }
+                    &_subheading {
+                        font-size: 14px;
+                    }
+                    &_button {
+                        margin: 20px auto;
+                    }
+                }
+            }
+        }
+        .products {
+            flex-direction: column;
+        }
+    }
+}
