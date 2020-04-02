@@ -13,7 +13,7 @@
 <body>
     <div class="parent-container">
         <div class="bg-img"></div>
-        <span class="down-arrow">&#8595;</span>
+        <span class="down-arrow"></span>
         <div class="left-pane">
             <header>
 
@@ -33,17 +33,15 @@
         <div class="right-pane1">
             <div class="card">
                 <img src="images/feed.svg" alt="mobile feed" />
-                <div class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                    has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                <div class="title">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    Ipsum
+                    has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                    galley
                     of type and scrambled it to make a type specimen book.</div>
             </div>
         </div>
     </div>
     <script>
-        document.documentElement.addEventListener('wheel', (e) => {
-            e.preventDefault();
-            document.querySelector('.down-arrow').click();
-        }, { passive: false })
         document.querySelector('.down-arrow').addEventListener('click', () => {
             let top = document.documentElement.scrollTop, viewportHeight = document.documentElement.clientHeight, scrollHeight = document.documentElement.scrollHeight - viewportHeight;
             if (top < scrollHeight) {
