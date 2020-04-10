@@ -343,7 +343,11 @@ html, body {
         grid-template-columns: 100%;
     -ms-grid-rows: 100%;
         grid-template-rows: 100%;
-    place-items: center;
+    padding: 20px 50px;
+  }
+  .header__title {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .header__links, .header button {
     display: none;
@@ -389,8 +393,10 @@ html, body {
   }
   .hero__right {
     -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: 1/1/1/1;
+    grid-row: 1/1;
+  }
+  .hero__right__image {
+    height: 300px;
   }
   .description {
     padding: 50px;

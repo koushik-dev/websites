@@ -259,7 +259,10 @@ html, body {
     .header {
         grid-template-columns: 100%;
         grid-template-rows: 100%;
-        place-items: center;
+        padding: 20px 50px;
+        &__title {
+            justify-self: center;
+        }
         &__links,  button{
             display: none;
         }
@@ -292,7 +295,10 @@ html, body {
             }
         }
         &__right {
-            grid-area: 1/1/1/1;
+            grid-row: 1/1;
+            &__image {
+                height: 300px;
+            }
         }
     }
     .description {
