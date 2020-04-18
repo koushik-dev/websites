@@ -21,18 +21,46 @@
                 </div>
                 <ul class="hero__header__links">
                     <span class="hero__header__selected"></span>
-                    <li data-color="yellow" class="active" onclick="selectedTab(1, true)">Home</li>
-                    <li data-color="blue-shade" onclick="selectedTab(2, true)">Timeline</li>
-                    <li data-color="violet-shade" onclick="selectedTab(3, true)">Gallery</li>
-                    <li data-color="pink-shade" onclick="selectedTab(4, true)">Services</li>
+                    <li data-color="yellow" class="active" onclick="changePage(1, true)">Home</li>
+                    <li data-color="blue-shade" onclick="changePage(2, true)">Timeline</li>
+                    <li data-color="violet-shade" onclick="changePage(3, true)">Gallery</li>
+                    <li data-color="pink-shade" onclick="changePage(4, true)">Services</li>
                 </ul>
             </header>
+            <section class="hero__section">
+                <main class="hero__section__main1">
+                    <div class="hero__section__main1__picture">
+                        <img src="assets/demo.jpg" alt="Profile picture">
+                    </div>
+                    <div class="hero__section__main1__content">
+                        <h1 class="hero__section__main1__content__title">Web Developer</h1>
+                        <h1 class="hero__section__main1__content__title">Designer</h1>
+                    </div>
+                    <div class="hero__section__main1__knowledge">
+                        <ul class="hero__section__main1__knowledge__list">
+                            <li>Tailwind</li>
+                            <li>Angular</li>
+                            <li>React</li>
+                            <li>Redux</li>
+                            <li>jQuery</li>
+                            <li>Gsap</li>
+                            <li>Bootstrap</li>
+                            <li>CSS3</li>
+                            <li>HTML5</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>
+                </main>
+                <main class="hero__section__main2"></main>
+                <main class="hero__section__main3"></main>
+                <main class="hero__section__main4"></main>
+            </section>
             <footer class="hero__footer">
                 <ul class="hero__footer__buttons">
-                    <li><input type="radio" checked name="selected" id="select1"><label onclick="selectedTab(1)" for="select1"></label></li>
-                    <li><input type="radio" name="selected" id="select2"><label onclick="selectedTab(2)" for="select2"></label for="select1"></li>
-                    <li><input type="radio" name="selected" id="select3"><label onclick="selectedTab(3)" for="select3"></label for="select1"></li>
-                    <li><input type="radio" name="selected" id="select4"><label onclick="selectedTab(4)" for="select4"></label for="select1"></li>
+                    <li><input type="radio" checked name="selected" id="select1"><label onclick="changePage(1)" for="select1"></label></li>
+                    <li><input type="radio" name="selected" id="select2"><label onclick="changePage(2)" for="select2"></label for="select1"></li>
+                    <li><input type="radio" name="selected" id="select3"><label onclick="changePage(3)" for="select3"></label for="select1"></li>
+                    <li><input type="radio" name="selected" id="select4"><label onclick="changePage(4)" for="select4"></label for="select1"></li>
                 </ul>
             </footer>
         </div>

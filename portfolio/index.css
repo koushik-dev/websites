@@ -1,5 +1,6 @@
 :root {
-  --playState: paused;
+  --text-color: #2E3739;
+  --red-text: #D55252;
   --white: #ffffff;
   --black: #000000;
   --gray: #e7e7e7;
@@ -36,6 +37,8 @@ body::-webkit-scrollbar {
   height: 100vh;
   overflow: hidden;
   padding: 50px;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .hero__container {
@@ -91,13 +94,13 @@ body::-webkit-scrollbar {
 
 .hero__header__selected {
   position: absolute;
-  top: 100%;
+  top: 50%;
   left: calc(var(--selected-tab) - 12.5%);
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   display: inline-block;
-  width: 30px;
-  height: 5px;
+  width: calc(25% - 50px);
+  height: 2px;
   border-radius: 100vh;
   background-color: var(--theme-color, --yellow);
   -webkit-transition: left 0.25s ease-in-out;
@@ -109,10 +112,11 @@ body::-webkit-scrollbar {
   opacity: 0.5;
   border-bottom-right-radius: 100vh;
   border-bottom-left-radius: 100vh;
-  width: 100%;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
   height: 45px;
   position: absolute;
-  bottom: 0;
 }
 
 .hero__footer__buttons {
@@ -155,5 +159,95 @@ body::-webkit-scrollbar {
   margin: 0 10px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+
+.hero__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: calc(100% - 135px);
+}
+
+.hero__section main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  border-radius: 50px 50px 0 0;
+}
+
+.hero__section__main1 {
+  background-color: var(--yellow);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35% 30% auto;
+      grid-template-columns: 35% 30% auto;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+}
+
+.hero__section__main1__picture {
+  max-width: 300px;
+  max-height: 400px;
+  overflow: hidden;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.hero__section__main1__picture img {
+  width: 100%;
+}
+
+.hero__section__main1__content {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  position: relative;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+
+.hero__section__main1__content__title {
+  position: relative;
+  left: -24%;
+  top: 25%;
+}
+
+.hero__section__main1__content__title:nth-child(2) {
+  color: var(--red-text);
+}
+
+.hero__section__main1__knowledge {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  text-align: right;
+}
+
+.hero__section__main1__knowledge__list {
+  list-style-type: none;
+  opacity: 0.5;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 7px;
+  color: var(--white);
+  line-height: 40px;
+  padding-top: 20px;
+}
+
+.hero__section__main2 {
+  display: none;
+  background-color: var(--blue-shade);
+}
+
+.hero__section__main3 {
+  display: none;
+  background-color: var(--violet-shade);
+}
+
+.hero__section__main4 {
+  display: none;
+  background-color: var(--pink-shade);
 }
 /*# sourceMappingURL=index.css.map */
