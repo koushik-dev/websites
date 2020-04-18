@@ -1,51 +1,15 @@
-function opener() {
-  gsap
-    .timeline()
-    .add("open")
-    .to(".hero__opener__left", {
-      keyframes: [
-        {
-          width: 0
-        },
-        {
-          display: "none",
-          delay: 1
-        }
-      ]
-    })
-    .to(
-      ".hero__opener__right",
-      {
-        keyframes: [
-          {
-            width: 0
-          },
-          {
-            display: "none",
-            delay: 1
-          }
-        ]
-      },
-      "open"
-    )
-    .to(
-      ".hero__opener__text",
-      {
-        keyframes: [
-          {
-            y: "-100%",
-            duration: 1,
-            opacity: 0
-          },
-          {
-            display: "none",
-            delay: 1
-          }
-        ]
-      },
-      "open"
-    )
-    .to('.hero__opener', {
-        display: 'none'
-    });
+function selectedTab(index, fromTop) {
+  const docElem = document.documentElement;
+  let color;
+  docElem.querySelectorAll('.hero__header__links li').forEach((el, i) => {
+    if (i + 1 === index) {
+      el.classList.add('active');
+      color = "--" + el.getAttribute('data-color')
+    } else {
+      el.classList.remove('active');
+    }
+  });
+  fromTop && (docElem.querySelector('.hero__footer__buttons').children[index - 1].querySelector("input").checked = !0);
+  docElem.style.setProperty('--selected-tab', (index * 25) + '%')
+  docElem.style.setProperty('--theme-color', getComputedStyle(docElem).getPropertyValue(color))
 }
