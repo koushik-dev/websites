@@ -29,7 +29,9 @@ function changeSelectedFooter(index) {
     .children[index - 1].querySelector("input").checked = !0;
 }
 
-function changeContent(index) { // ISSUE: Same Tab Click Again
+function changeContent(index) {
+  // ISSUE 1: Same Tab Click Again
+  // ISSUE 2: FAst navigation between tabs open all tabs
   let tl = gsap.timeline();
   tl.to(".hero__section main:nth-child(" + activePage + ")", {
       duration: 0.5,

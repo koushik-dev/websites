@@ -36,7 +36,7 @@ body::-webkit-scrollbar {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  padding: 50px;
+  padding: 20px;
   -webkit-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
@@ -162,6 +162,7 @@ body::-webkit-scrollbar {
 }
 
 .hero__section {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
