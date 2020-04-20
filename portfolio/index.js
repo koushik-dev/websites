@@ -29,12 +29,12 @@ function changeSelectedFooter(index) {
     .children[index - 1].querySelector("input").checked = !0;
 }
 
-function changeContent(index) {
+function changeContent(index) { // ISSUE: Same Tab Click Again
   let tl = gsap.timeline();
   tl.to(".hero__section main:nth-child(" + activePage + ")", {
-    duration: 0.5,
-    height: "0%",
-  })
+      duration: 0.5,
+      height: "0%",
+    })
     .to(".hero__section main:nth-child(" + activePage + ")", {
       duration: 0,
       display: "none",
