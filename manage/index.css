@@ -1,0 +1,176 @@
+:root {
+  --text-color: #232d50;
+  --text-gray: #cecdd2;
+  --app-color: #f3613c;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.header__title {
+  color: var(--text-color);
+}
+
+.header__links {
+  color: var(--text-color);
+}
+
+.header__button {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: var(--app-color);
+  -webkit-box-shadow: 0px 19px 11px -15px var(--app-color);
+          box-shadow: 0px 19px 11px -15px var(--app-color);
+}
+
+.header__hamburger {
+  height: 3px;
+  width: 25px;
+  background-color: var(--text-color);
+}
+
+.header__hamburger::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  height: 3px;
+  width: 25px;
+  background-color: var(--text-color);
+}
+
+.header__hamburger::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  height: 3px;
+  width: 25px;
+  background-color: var(--text-color);
+}
+
+.hero__content__title {
+  color: var(--text-color);
+}
+
+.hero__content__description {
+  color: var(--text-gray);
+}
+
+.hero__content__button {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: var(--app-color);
+  -webkit-box-shadow: 0px 19px 11px -15px var(--app-color);
+          box-shadow: 0px 19px 11px -15px var(--app-color);
+}
+
+.about__content__title {
+  color: var(--text-color);
+}
+
+.about__content__description {
+  color: var(--text-gray);
+}
+
+.about__points__list__title {
+  background-color: #f3613c20;
+  color: var(--text-color);
+}
+
+.about__points__list__title__index {
+  background-color: var(--app-color);
+}
+
+.about__points__list__description {
+  color: var(--text-gray);
+}
+
+.reviews__title {
+  color: var(--text-color);
+}
+
+.reviews__list__profile {
+  width: 100px;
+  height: 100px;
+}
+
+.reviews__list__profile img {
+  width: 100%;
+  height: 6.3rem;
+}
+
+.reviews__list__name {
+  color: var(--text-color);
+}
+
+.reviews__list__comment {
+  color: var(--text-gray);
+}
+
+.banner {
+  background-color: var(--app-color);
+}
+
+.banner__button {
+  background-color: white;
+  color: var(--app-color);
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer {
+  background-color: #1e1e26;
+}
+
+.footer__mail__input {
+  max-width: 13rem;
+}
+
+.footer__mail__button {
+  background-color: var(--app-color);
+}
+
+.footer__icons__icon {
+  width: 50px;
+  height: 50px;
+}
+
+.footer__copyright {
+  color: var(--text-gray);
+}
+
+.company__logo {
+  margin: 0 15px 0 0;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -200%);
+          transform: translate(-50%, -200%);
+  width: 5px;
+  height: 5px;
+  background-color: #da8472;
+  -webkit-box-shadow: 10px 0 0 0 #da8472, 0 10px 0 0 #da8472, 10px 10px 0 0 #745352;
+          box-shadow: 10px 0 0 0 #da8472, 0 10px 0 0 #da8472, 10px 10px 0 0 #745352;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content__button {
+    -ms-grid-column-align: start;
+        justify-self: start;
+  }
+  .about__points__list__title {
+    background-color: #ffffff;
+  }
+  .banner__button {
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+/*# sourceMappingURL=index.css.map */

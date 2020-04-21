@@ -1,0 +1,158 @@
+:root {
+    --text-color: #232d50;
+    --text-gray: #cecdd2;
+    --app-color: #f3613c;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html, body {
+    height: 100%;
+}
+.header {
+    &__title {
+        color: var(--text-color);
+    }
+    &__links {
+        color: var(--text-color);
+    }
+    &__button {
+        justify-self: center;
+        background-color: var(--app-color);
+        box-shadow: 0px 19px 11px -15px var(--app-color);
+    }
+    &__hamburger {
+        height: 3px;
+        width: 25px;
+        background-color: var(--text-color);
+        &::before {
+            content: "";
+            position: absolute;
+            top: -7px;
+            height: 3px;
+            width: 25px;
+            background-color: var(--text-color);
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -7px;
+            height: 3px;
+            width: 25px;
+            background-color: var(--text-color);
+        }
+    }
+}
+.hero {
+    &__content {
+        &__title {
+            color: var(--text-color);
+        }
+        &__description {
+            color: var(--text-gray);
+        }
+        &__button {
+            justify-self: center;
+            background-color: var(--app-color);
+            box-shadow: 0px 19px 11px -15px var(--app-color);
+        }
+    }
+}
+.about {
+    &__content {
+        &__title {
+            color: var(--text-color);
+        }
+        &__description {
+            color: var(--text-gray);
+        }
+    }
+    &__points {
+        &__list {
+            &__title {
+                background-color: #f3613c20;
+                color: var(--text-color);
+                &__index {
+                    background-color: var(--app-color);
+                }
+            }
+            &__description {
+                color: var(--text-gray);
+            }
+        }
+    }
+}
+.reviews {
+    &__title {
+        color: var(--text-color);
+    }
+    &__list {
+        &__profile {
+            width: 100px;
+            height: 100px;
+            img {
+                width: 100%;
+                height: 6.3rem;
+            }
+        }
+        &__name {
+            color: var(--text-color);
+        }
+        &__comment {
+            color: var(--text-gray);
+        }
+    }
+}
+.banner {
+    background-color: var(--app-color);
+    &__button {
+        background-color: white;
+        color: var(--app-color);
+        justify-self: center;
+    }
+}
+.footer {
+    background-color: #1e1e26;
+    &__mail {
+        &__input {
+            max-width: 13rem;
+        }
+        &__button {
+            background-color: var(--app-color);
+        }
+    }
+    &__icons {
+        &__icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    &__copyright {
+        color: var(--text-gray);
+    }
+}
+.company__logo {
+    margin: 0 15px 0 0;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -200%);
+    width: 5px;
+    height: 5px;
+    background-color: #da8472;
+    box-shadow: 10px 0 0 0 #da8472, 0 10px 0 0 #da8472, 10px 10px 0 0 #745352;
+}
+
+@media screen and (min-width: 768px) {
+    .hero__content__button {
+        justify-self: start;
+    }
+    .about__points__list__title {
+        background-color: #ffffff;
+    }
+    .banner__button {
+        justify-self: end;
+    }
+}

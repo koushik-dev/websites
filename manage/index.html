@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Landing page</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header flex justify-between items-center px-5 py-3 md:py-10 md:px-32">
+        <div class="header__title text-2xl font-medium relative"><span class="company__logo inline-block rounded-full relative"></span>manage</div>
+        <ul class="header__links hidden md:flex justify-between text-sm">
+            <li class="mx-5"><a href="javascript:void(0)">Pricing</a></li>
+            <li class="mx-5"><a href="javascript:void(0)">Product</a></li>
+            <li class="mx-5"><a href="javascript:void(0)">About Us</a></li>
+            <li class="mx-5"><a href="javascript:void(0)">Careers</a></li>
+            <li class="mx-5"><a href="javascript:void(0)">Community</a></li>
+        </ul>
+        <div class="header__hamburger relative inline-block md:hidden"></div>
+        <button class="header__button hidden md:block rounded-full font-bold text-xs text-white px-8 py-3">Get Started</button>
+    </header>
+    <section class="hero px-5 py-3 md:px-32 md:grid md:grid-cols-2 md:grid-rows-1">
+        <div class="hero__picture md:col-start-2 max-w-full">
+            <img class="hero__picture__img" src="assets/chart.svg" alt="statistics" />
+        </div>
+        <div class="hero__content grid md:col-start-1 md:row-start-1 md:pr-12">
+            <h1 class="hero__content__title text-3xl font-semibold text-center mt-5 md:text-5xl md:text-left">Bring everyone together to build
+                better products.</h1>
+            <p class="hero__content__description text-xs font-medium px-5 mt-1 md:px-0 md:pr-24 md:leading-6">Manage makes it simple for software
+                teams to plan day-to-day tasks while keeping the larger teams goals in view.</p>
+            <button class="hero__content__button rounded-full font-bold text-xs text-white px-8 py-3 mt-10 md:py-3">Get
+                Started</button>
+        </div>
+    </section>
+    <section class="about md:mt-24 md:grid md:grid-cols-2 md:gap-20 md:px-32">
+        <div class="about__content grid justify-center px-10 md:col-start-1 md:px-0 md:block">
+            <h1 class="about__content__title text-2xl text-center font-semibold mt-10 md:text-3xl md:text-left">What's different about Manage?</h1>
+            <p class="about__content__description text-xs font-medium mt-5 text-center md:text-left md:pr-48 md:leading-6">Manage provides all functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.</p>
+        </div>
+        <div class="about__points mt-12 md:col-start-2 md:mt-0">
+            <ul class="about__points__list ml-5">
+                <li class="mt-10">
+                    <div class="about__points__list__title font-semibold text-xs rounded-l-full md:text-base"><span class="about__points__list__title__index text-white inline-block rounded-full px-8 py-3 text-base mr-3">01</span>Track company-wide progress</div>
+                    <div class="about__points__list__description font-medium text-xs leading-6 mt-5 pr-5 md:pl-24">See how your day-to-day tasks fit in to the wider vision. Go from tracking progress at the milestone level all the way done to the smallest at details. Never lose sight of the bigger picture again.</div>
+                </li>
+                <li class="mt-10">
+                    <div class="about__points__list__title font-semibold text-xs rounded-full md:text-base"><span class="about__points__list__title__index text-white inline-block rounded-full px-8 py-3 text-base mr-3">02</span>Advanced built-in reports</div>
+                    <div class="about__points__list__description font-medium text-xs leading-6 mt-5 pr-5 md:pl-24">Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.</div>
+                </li>
+                <li class="mt-10">
+                    <div class="about__points__list__title font-semibold text-xs rounded-l-full md:text-base"><span class="about__points__list__title__index text-white inline-block rounded-full px-8 py-3 text-base mr-3">03</span>Everything you need in one place</div>
+                    <div class="about__points__list__description font-medium text-xs leading-6 mt-5 pr-5 md:pl-24">Stop jumping from one service to another to communicate, store files, track tasks and share documents. Manage offers an all-in-one team productivity solution.</div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="reviews grid">
+        <h1 class="reviews__title my-20 text-center font-bold text-3xl md:my-12">What they've said</h1>
+        <ul class="reviews__list md:flex">
+            <li class="flex flex-col items-center my-10 md:mx-10">
+                <span class="reviews__list__profile rounded-full inline-block overflow-hidden"><img src="assets/pro1.jpg" alt="customer 1"></span>
+                <h3 class="reviews__list__name my-5 text-center font-semibold">Ali Bravo</h3>
+                <p class="reviews__list__comment text-xs leading-6 text-center">"We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused."</p>
+            </li>
+            <li class="flex flex-col items-center my-10 md:mx-10">
+                <span class="reviews__list__profile rounded-full inline-block overflow-hidden"><img src="assets/pro3.jpg" alt="customer 2"></span>
+                <h3 class="reviews__list__name my-5 text-center font-semibold">Harley Quinn</h3>
+                <p class="reviews__list__comment text-xs leading-6 text-center">"We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused."</p>
+            </li>
+            <li class="flex flex-col items-center my-10 md:mx-10">
+                <span class="reviews__list__profile rounded-full inline-block overflow-hidden"><img src="assets/pro2.jpg" alt="customer 3"></span>
+                <h3 class="reviews__list__name my-5 text-center font-semibold">Nick Fury</h3>
+                <p class="reviews__list__comment text-xs leading-6 text-center">"We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused."</p>
+            </li>
+        </ul>
+        <button class="hidden md:block mt-20 mb-48 mx-auto hero__content__button rounded-full font-bold text-xs text-white px-8 py-3 mt-10 md:py-3">Get
+            Started</button>
+    </section>
+    <section class="banner height-full py-20 px-8 grid md:grid-cols-2 md:items-center md:gap-10">
+        <h1 class="banner__text text-white font-semibold text-3xl text-center">Simplify how your team works today.</h1>
+        <button class="banner__button rounded-full font-bold text-xs px-8 py-3 mt-10 md:mt-0 md:mr-20">Get Started</button>
+    </section>
+    <footer class="footer pt-10 px-4 pb-5 md:grid md:grid-cols-3 md:pr-24 md:pl-12 md:gap-12">
+        <div class="footer__mail flex md:col-start-3 md:justify-end">
+            <input type="text" name="email" id="email" placeholder="Updates in your inbox..." class="footer__mail__input rounded-full px-4 py-3 text-xs max-w-xs" />
+            <button class="footer__mail__button rounded-full px-6 text-white font-semibold mx-2">GO</button>
+        </div>
+        <ul class="footer__links grid grid-cols-2 grid-rows-4 text-xs my-10 pl-8 gap-4 md:col-start-2 md:text-base md:pl-0 row-start-1 row-span-2 md:mt-0 md:mb-0">
+            <li><a href="javascript:void(0)" class="text-white no-underline">Home</a></li>
+            <li><a href="javascript:void(0)" class="text-white no-underline">Careers</a></li>
+            <li><a href="javascript:void(0)" class="text-white no-underline">Pricing</a></li>
+            <li><a href="javascript:void(0)" class="text-white no-underline">Community</a></li>
+            <li><a href="javascript:void(0)" class="text-white no-underline">Products</a></li>
+            <li><a href="javascript:void(0)" class="text-white no-underline">Privacy Policy</a></li>
+            <li><a href="javascript:void(0)" class="text-white no-underline">About Us</a></li>
+        </ul>
+        <div class="footer__icons flex my-5 justify-between md:col-start-1 md:row-start-2 md:my-0">
+            <span class="footer__icons__icon inline-block rounded-full bg-white"></span>
+            <span class="footer__icons__icon inline-block rounded-full bg-white"></span>
+            <span class="footer__icons__icon inline-block rounded-full bg-white"></span>
+            <span class="footer__icons__icon inline-block rounded-full bg-white"></span>
+            <span class="footer__icons__icon inline-block rounded-full bg-white"></span>
+        </div>
+        
+        <h1 class="footer__logo text-2xl font-medium text-white text-center relative md:col-start-1 md:row-start-1 md:text-left"><span class="company__logo inline-block rounded-full relative"></span>manage</h1>
+        <p class="footer__copyright text-center text-xs mt-10 opacity-50 md:col-start-3 md:text-right">Copyright 2020. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
