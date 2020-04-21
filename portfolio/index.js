@@ -2,10 +2,12 @@ const docElem = document.documentElement;
 let activePage = 1;
 
 function changePage(index, fromTop) {
-  changeSelectedHeader(index);
-  fromTop && changeSelectedFooter(index);
-  changeContent(index);
-  activePage = index;
+  if(index !== activePage) {
+    changeSelectedHeader(index);
+    fromTop && changeSelectedFooter(index);
+    changeContent(index);
+    activePage = index;
+  }  
 }
 
 function changeSelectedHeader(index) {
@@ -30,20 +32,17 @@ function changeSelectedFooter(index) {
 }
 
 function changeContent(index) {
-  // ISSUE 1: Same Tab Click Again
-  // ISSUE 2: FAst navigation between tabs open all tabs
   let tl = gsap.timeline();
-  tl.to(".hero__section main:nth-child(" + activePage + ")", {
-      duration: 0.5,
-      height: "0%",
-    })
-    .to(".hero__section main:nth-child(" + activePage + ")", {
-      duration: 0,
-      display: "none",
-    })
-    .to(".hero__section main:nth-child(" + index + ")", {
-      duration: 1,
-      display: "grid",
-      height: "100%",
-    });
+  tl.to('.hero__section main', {
+    duration: 0,
+    borderRadius: "0"
+  })
+  .to(".hero__section", {
+    duration: 1,
+    scrollTop: (index - 1) * parseInt(getComputedStyle(docElem.querySelector('main')).height),
+  })
+  .to('.hero__section main:nth-child(' + index + ')', {
+    duration: 0.15,
+    borderRadius: "50px 50px 0 0"
+  });
 }
