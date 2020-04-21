@@ -174,6 +174,8 @@ body::-webkit-scrollbar {
   width: 100%;
   margin: 0 10px;
   border-radius: 50px 50px 0 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
+  background-image: linear-gradient(#ffffff80, transparent);
   background-color: var(--yellow);
   display: -ms-grid;
   display: grid;
@@ -238,6 +240,8 @@ body::-webkit-scrollbar {
   width: 100%;
   margin: 0 10px;
   border-radius: 50px 50px 0 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
+  background-image: linear-gradient(#ffffff80, transparent);
   height: 0%;
   display: none;
   background-color: var(--blue-shade);
@@ -248,6 +252,8 @@ body::-webkit-scrollbar {
   width: 100%;
   margin: 0 10px;
   border-radius: 50px 50px 0 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
+  background-image: linear-gradient(#ffffff80, transparent);
   height: 0%;
   display: none;
   background-color: var(--violet-shade);
@@ -258,6 +264,8 @@ body::-webkit-scrollbar {
   width: 100%;
   margin: 0 10px;
   border-radius: 50px 50px 0 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
+  background-image: linear-gradient(#ffffff80, transparent);
   height: 0%;
   display: none;
   background-color: var(--pink-shade);
