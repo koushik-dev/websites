@@ -1,6 +1,8 @@
 const docElem = document.documentElement;
 let activePage = 1;
 
+
+
 function changePage(index, fromTop) {
   if(index !== activePage) {
     changeSelectedHeader(index);

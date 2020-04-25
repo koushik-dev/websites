@@ -177,8 +177,8 @@ body::-webkit-scrollbar {
   position: relative;
   margin: 0 10px;
   min-height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
-  background-image: linear-gradient(#ffffff80, transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#ffffff80));
+  background-image: linear-gradient(transparent, #ffffff80);
   background-color: var(--yellow);
   display: -ms-grid;
   display: grid;
@@ -243,17 +243,24 @@ body::-webkit-scrollbar {
   position: relative;
   margin: 0 10px;
   min-height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
-  background-image: linear-gradient(#ffffff80, transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#ffffff80));
+  background-image: linear-gradient(transparent, #ffffff80);
+  background-image: none;
   background-color: var(--blue-shade);
+  padding: 50px;
+}
+
+.hero__section__main2__container {
+  max-width: 500px;
+  margin: auto;
 }
 
 .hero__section__main3 {
   position: relative;
   margin: 0 10px;
   min-height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
-  background-image: linear-gradient(#ffffff80, transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#ffffff80));
+  background-image: linear-gradient(transparent, #ffffff80);
   background-color: var(--violet-shade);
 }
 
@@ -261,8 +268,8 @@ body::-webkit-scrollbar {
   position: relative;
   margin: 0 10px;
   min-height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff80), to(transparent));
-  background-image: linear-gradient(#ffffff80, transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#ffffff80));
+  background-image: linear-gradient(transparent, #ffffff80);
   background-color: var(--pink-shade);
 }
 /*# sourceMappingURL=index.css.map */
