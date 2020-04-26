@@ -254,6 +254,7 @@ body::-webkit-scrollbar {
   max-width: 800px;
   margin: auto;
   height: 100%;
+  color: var(--text-color);
 }
 
 .hero__section__main3 {

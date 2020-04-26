@@ -38,10 +38,28 @@
         cont.className = "content";
 
         //create template
+        cont.append(createTemplate(data[i]));
 
         scroller.append(cont);
       }
       container.append(scroller);
+      return container;
+    }
+
+    function createTemplate(data) {
+      const container = create('div'),
+      title = create('h1'),
+      company = create('span');
+      container.className = "template";
+      title.className = "template__title";
+      title.textContent = data.title;
+
+      company.className = "template__company";
+      company.textContent = data.company;
+
+      container.append(title);
+      container.append(company);
+
       return container;
     }
 
@@ -58,7 +76,10 @@
         dots.append(createDot(i, dotsData[i].year));
       }
 
-      line.append(dots);
+      const div = create('div');
+      div.style.width = '70%';
+      div.append(dots);
+      line.append(div);
       container.append(line);
       return container;
     }
@@ -101,14 +122,17 @@
         scrollContainer(e.target.getAttribute("data-dot"));
       });
     }
+
     function addActive(el) {
       el.classList.add("active");
     }
+
     function removeActive() {
       document
         .querySelectorAll(".line__dots")
         .forEach((dot) => dot.classList.remove("active"));
     }
+
     function scrollContainer(index) {
       var container = document.querySelector(".dots"),
         dots = document.querySelectorAll(".line__dots"),
