@@ -14,10 +14,16 @@
     });
 
     function createContent(data) {
-      const el = create("div");
+      const el = create("div"), leftArrow = create('a'), rightArrow = create('a');
       el.className = "timeline-container";
+      leftArrow.className = 'left-arrow';
+      rightArrow.className = 'right-arrow';
+      addArrowEvent(leftArrow);
+      addArrowEvent(rightArrow);
+      el.append(leftArrow);
       el.append(createDots(data));
       el.append(createSlides(data));
+      el.append(rightArrow);
       return el;
     }
 
@@ -70,6 +76,24 @@
       return el;
     }
 
+    function addArrowEvent(arrow) {
+      arrow.addEventListener('click', (e) => {
+        let buffer = 0;
+        if(e.target.classList.contains('left-arrow')) {
+          buffer = -1;
+        } else {
+          buffer = 1;
+        }
+        let dots = document.querySelectorAll('.line__dots'), activeIndex = parseInt([...dots].filter(e => e.classList.contains('active'))[0].getAttribute('data-dot')) + buffer;
+        activeIndex === dots.length && (activeIndex = 0);
+        activeIndex === -1 && (activeIndex = dots.length - 1);
+        const el = dots[activeIndex]
+        removeActive();
+        addActive(el);
+        scrollContainer(el.getAttribute("data-dot"));
+      });
+    }
+
     function addDotEvent(dot) {
       dot.addEventListener("click", (e) => {
         removeActive();
@@ -100,8 +124,8 @@
     }
 
     function scrollContent(index) {
-      const scroller = document.querySelector(".content-scroller");
-      scroller.style.left = -(index * 420) + "px"; // 420 width of the card.
+      const scroller = document.querySelector(".content-scroller"), width = parseInt(getComputedStyle(document.querySelector('.content')).width) + 10; // 10 for margin-left
+      scroller.style.left = -(index * width) + "px";
     }
   }
 })();

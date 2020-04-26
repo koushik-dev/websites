@@ -186,10 +186,11 @@ body {
             @include mainContent();
             background-image: none;
             background-color: var(--blue-shade);
-            padding: 50px;
+            padding: 20px;
             &__container {
-                max-width: 500px;
+                max-width: 800px;
                 margin: auto;
+                height: 100%;
             }
         }
         &__main3 {

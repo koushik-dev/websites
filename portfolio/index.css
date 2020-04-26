@@ -247,12 +247,13 @@ body::-webkit-scrollbar {
   background-image: linear-gradient(transparent, #ffffff80);
   background-image: none;
   background-color: var(--blue-shade);
-  padding: 50px;
+  padding: 20px;
 }
 
 .hero__section__main2__container {
-  max-width: 500px;
+  max-width: 800px;
   margin: auto;
+  height: 100%;
 }
 
 .hero__section__main3 {
