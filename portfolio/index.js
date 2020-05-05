@@ -45,6 +45,6 @@ function changeContent(index) {
   })
   .to('.hero__section main:nth-child(' + index + ')', {
     duration: 0.15,
-    borderRadius: "50px 50px 0 0"
+    borderRadius: document.body.clientWidth > 1024 ? "50px 50px 0 0" : "0"
   });
 }

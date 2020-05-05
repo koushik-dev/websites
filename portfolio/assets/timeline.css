@@ -156,3 +156,51 @@
       letter-spacing: 1px;
       font-weight: 300;
   }
+  .m-year {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    transform: translate(0, -50%);
+  }
+
+  @media screen and (max-width: 1024px) {
+    .line-container {
+      display: none;
+    }
+    .template {
+      text-align: center;
+    }
+    .left-arrow {
+      border-width: 20px 20px 20px 0;
+      right: 60%;
+      top: 100%;
+      left: auto;
+      transform: translate(-100%, -127%);
+      z-index: 1;
+    }
+    .left-arrow:active {
+      transform: translate(-100%, -127%) scale(0.9);
+    }
+    .right-arrow {
+      border-width: 20px 0 20px 20px;
+      left: 60%;
+      top: 100%;
+      right: auto;
+      transform: translate(100%, -127%)
+    }
+    .right-arrow:active {
+      transform: translate(100%, -127%) scale(0.9);
+    }
+    .line::before, .line::after {
+      width: 50px;
+    }
+    .line__dots__label {
+      font-size: 0.5rem;
+    }
+    .line__dots__label.active {
+      font-size: 0.65rem;
+    }
+    .m-year {
+      display: inline;
+    }
+  }

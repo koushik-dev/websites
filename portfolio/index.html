@@ -7,10 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
     <link rel="stylesheet" href="index.css">
+
     <link rel="stylesheet" href="assets/timeline.css">
+    <link rel="stylesheet" href="assets/autotype.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="index.js" type="text/javascript"></script>
     <script src="assets/timeline.js" type="text/javascript"></script>
+    <script src="assets/autotype.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 </head>
 
@@ -31,12 +34,11 @@
             </header>
             <section class="hero__section">
                 <main class="hero__section__main1">
-                    <div class="hero__section__main1__picture">
-                        <img src="assets/demo.jpg" alt="Profile picture">
-                    </div>
+                    <div class="hero__section__main1__picture"></div>
                     <div class="hero__section__main1__content">
-                        <h1 class="hero__section__main1__content__title">Web Developer</h1>
-                        <h1 class="hero__section__main1__content__title">Designer</h1>
+                        <h1 class="hero__section__main1__content__heading">I am Koushik. <br/> I am a </h1>
+                        <h1 class="hero__section__main1__content__title"></h1>
+                        
                     </div>
                     <div class="hero__section__main1__knowledge">
                         <ul class="hero__section__main1__knowledge__list">
@@ -72,15 +74,34 @@
     </div>
 
     <script>
-        (function () { 
+        (function () {
             new Timeline('.hero__section__main2__container',
-            [
-                { year: "2008 - 2014", company: "", title: "Education" },
-                { year: "2014 - 2017", company: "Syncfusion Software Pvt. Ltd.", title: "Software Engineer Level 3" }, 
-                { year: "2017 - 2019", company: "HCL Technologies", title: "Lead Engineer" }, 
-                { year: "2019 - 2020", isActive: true, company: "Pramati Technologies", title: "Senior Development Engineer" }
-            ]
-        ) })()
+                [
+                    { year: "2008 - 2014", company: "Bachelor of Engineering - Computer Science and Engineering", title: "Graduate" },
+                    { year: "2014 - 2017", company: "Syncfusion Software Pvt. Ltd.", title: "Software Engineer Level 3" },
+                    { year: "2017 - 2019", company: "HCL Technologies", title: "Lead Engineer" },
+                    { year: "2019 - 2020", isActive: true, company: "Pramati Technologies", title: "Senior Development Engineer" }
+                ]
+            );
+            new AutoType({
+                selector: '.hero__section__main1__content__title',
+                words: [
+                    {
+                        text: "Frontend Developer",
+                        styles: { color: 'var(--red-text)' }
+                    }, {
+                        text: "UX Designer",
+                        styles: { color: 'var(--gray)', 'background-color': 'var(--black)'}
+                    }, {
+                        text: "Freelancer",
+                        styles: { color: 'green' }
+
+                    }
+                ],
+                cursorDuration: 200,
+                timeGap: 100
+            })
+        })()
     </script>
 </body>
 

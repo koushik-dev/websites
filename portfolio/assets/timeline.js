@@ -49,8 +49,12 @@
     function createTemplate(data) {
       const container = create('div'),
       title = create('h1'),
-      company = create('span');
+      company = create('span'), year = create('span');
       container.className = "template";
+
+      year.className = "m-year"; // mobile year display
+      year.textContent = data.year;
+
       title.className = "template__title";
       title.textContent = data.title;
 
@@ -59,6 +63,7 @@
 
       container.append(title);
       container.append(company);
+      container.append(year);
 
       return container;
     }

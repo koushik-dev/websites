@@ -143,14 +143,15 @@ body {
             grid-template-columns: 35% 30% auto;
             grid-template-rows: 100%;
             &__picture {
-                max-width: 300px;
-                max-height: 400px;
+                min-width: 100%;
+                min-height: 100%;
                 overflow: hidden;
                 align-self: center;
                 justify-self: end;
-                img {
-                    width: 100%;
-                }
+                filter: grayscale(1);
+                background-image: url(assets/demo.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
             }
             &__content {
                 color: var(--text-color);
@@ -158,16 +159,16 @@ body {
                 position: relative;
                 white-space: nowrap;
                 letter-spacing: 2px;
+                &__heading {
+                    padding: 5px;
+                }
                 &__title{
+                    z-index: 1;
                     position: relative;
-                    left: -24%;
-                    top: 25%;
-                    &:nth-child(2) {
-                        color: var(--red-text);
-                    }
                 }
             }
             &__knowledge {
+                z-index: 0;
                 justify-self: end;
                 text-align: right;
                 &__list {
@@ -204,3 +205,73 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .hero {
+      padding: 0;
+      overflow: scroll;
+      &__container {
+        border-radius: 0;
+      }
+      &__section {
+          height: calc(100% - 45px);
+          &__main1 {
+              margin: 0;
+              border-radius: 0;
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              &__picture {
+                  position: absolute;
+              }
+              &__content {
+                  z-index: 1;
+                  font-size: 5vw;
+                  display: grid;
+                  grid-template-rows: 1fr 0.5fr;
+
+                  &__heading {
+                      color: var(--black);
+                  }
+                  &__title {
+                      position: static;
+                      color: var(--black);
+                  }
+              }
+              &__knowledge {
+                  right: 0;
+                  position: absolute;
+                  &__list {
+                      color: var(--black);
+                  }
+              }
+          }
+          &__main2 {
+            margin: 0;
+            border-radius: 0;
+            padding: 10px;
+          }
+      }
+      &__header {
+          display: none;
+      }
+      &__footer {
+          position: static;
+          border-radius: 0;
+          &__buttons {
+              justify-content: space-between;
+              input {
+                  &:checked + label {
+                      width: 35px;
+                      height: 35px;
+                  }
+              }
+              label {
+                  border-radius: 10px;
+                  height: 35px;
+                  width: 35px;
+              }
+          }
+      }
+    }
+  }
