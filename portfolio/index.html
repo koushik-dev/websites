@@ -6,95 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css">
 
     <link rel="stylesheet" href="assets/timeline.css">
     <link rel="stylesheet" href="assets/autotype.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="index.js" type="text/javascript"></script>
     <script src="assets/timeline.js" type="text/javascript"></script>
     <script src="assets/autotype.js" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 </head>
 
 <body>
     <div class="hero">
+        <div class="hero__bg-image"></div>
         <div class="hero__container">
-            <header class="hero__header">
-                <div class="hero__header__logo">
-                    <img src="assets/logo.png" alt="Koushik Logo" />
-                </div>
-                <ul class="hero__header__links">
-                    <span class="hero__header__selected"></span>
-                    <li data-color="yellow" class="active" onclick="changePage(1, true)">Home</li>
-                    <li data-color="blue-shade" onclick="changePage(2, true)">Timeline</li>
-                    <li data-color="violet-shade" onclick="changePage(3, true)">Gallery</li>
-                    <li data-color="pink-shade" onclick="changePage(4, true)">Services</li>
-                </ul>
-            </header>
-            <section class="hero__section">
-                <main class="hero__section__main1">
-                    <div class="hero__section__main1__picture"></div>
-                    <div class="hero__section__main1__content">
-                        <h1 class="hero__section__main1__content__heading">I am Koushik. <br/> I am a </h1>
-                        <h1 class="hero__section__main1__content__title"></h1>
-                        
-                    </div>
-                    <div class="hero__section__main1__knowledge">
-                        <ul class="hero__section__main1__knowledge__list">
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Bootstrap</li>
-                            <li>Tailwind</li>
-                            <li>Javascript</li>
-                            <li>jQuery</li>
-                            <li>Angular</li>
-                            <li>React</li>
-                            <li>Redux</li>
-                            <li>Gatsby</li>
-                            <li>Gsap</li>
-                        </ul>
-                    </div>
-                </main>
-                <main class="hero__section__main2">
-                    <article class="hero__section__main2__container"></article>
-                </main>
-                <main class="hero__section__main3"></main>
-                <main class="hero__section__main4"></main>
-            </section>
-            <footer class="hero__footer">
-                <ul class="hero__footer__buttons">
-                    <li><input type="radio" checked name="selected" id="select1"><label onclick="changePage(1)" for="select1"></label></li>
-                    <li><input type="radio" name="selected" id="select2"><label onclick="changePage(2)" for="select2"></label for="select1"></li>
-                    <li><input type="radio" name="selected" id="select3"><label onclick="changePage(3)" for="select3"></label for="select1"></li>
-                    <li><input type="radio" name="selected" id="select4"><label onclick="changePage(4)" for="select4"></label for="select1"></li>
-                </ul>
-            </footer>
+            <h1 class="hero__container__title">Koushik</h1>
+            <p class="hero__container__subtitle">
+                I m a  
+                <span class="hero__container__subtitle__text"></span>
+            </p>
         </div>
     </div>
-
+    <div class="" style="height: 200vh"></div>
+    <div class="contact">
+        <h3>Contact Links</h3>
+        <ul class="contact__links">
+            <li>
+                <a href="mailto:rskkoushik@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/mail.svg" alt="mail" />
+                    <span class="contact__links__text">Mail</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/koushikrsk" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/twitter.svg" alt="twitter" />
+                    <span class="contact__links__text">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/koushik-dev" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/github.svg" alt="github" />
+                    <span class="contact__links__text">Github</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/koushik27" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/codepen.png" alt="codepen">
+                    <span class="contact__links__text">Codepen</span>
+                </a>
+            </li>
+            <li></li>
+        </ul>
+        <p class="contact__copy">&copy; Koushik. 2020</p>
+    </div>
+        
     <script>
         (function () {
-            new Timeline('.hero__section__main2__container',
-                [
-                    { year: "2008 - 2014", company: "Bachelor of Engineering - Computer Science and Engineering", title: "Graduate" },
-                    { year: "2014 - 2017", company: "Syncfusion Software Pvt. Ltd.", title: "Software Engineer Level 3" },
-                    { year: "2017 - 2019", company: "HCL Technologies", title: "Lead Engineer" },
-                    { year: "2019 - 2020", isActive: true, company: "Pramati Technologies", title: "Senior Development Engineer" }
-                ]
-            );
+            // new Timeline('.hero__section__main2__container',
+            //     [
+            //         { year: "2008 - 2014", company: "Bachelor of Engineering - Computer Science and Engineering", title: "Graduate" },
+            //         { year: "2014 - 2017", company: "Syncfusion Software Pvt. Ltd.", title: "Software Engineer Level 3" },
+            //         { year: "2017 - 2019", company: "HCL Technologies", title: "Lead Engineer" },
+            //         { year: "2019 - 2020", isActive: true, company: "Pramati Technologies", title: "Senior Development Engineer" }
+            //     ]
+            // );
             new AutoType({
-                selector: '.hero__section__main1__content__title',
+                selector: '.hero__container__subtitle__text',
                 words: [
                     {
                         text: "Frontend Developer",
-                        styles: { color: 'var(--red-text)' }
+                        styles: { color: '#809ceb' }
                     }, {
                         text: "UX Designer",
-                        styles: { color: 'var(--gray)', 'background-color': 'var(--black)'}
+                        styles: { color: '#D55252' }
                     }, {
                         text: "Freelancer",
-                        styles: { color: 'green' }
+                        styles: { color: '#f2bf33' }
 
                     }
                 ],
