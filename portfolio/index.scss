@@ -107,7 +107,7 @@ html, body {
         display: flex;
         list-style-type: none;
         li {
-            margin: 10px;
+            margin: 5px 10px;
             transform: scale(0.9);
             transition: transform 0.05s ease-in-out;
             &:hover {
