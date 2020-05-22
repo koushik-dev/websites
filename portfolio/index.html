@@ -35,32 +35,47 @@
     <div class="" style="height: 200vh"></div>
     <div class="contact">
         <h3>Contact Links</h3>
-        <ul class="contact__links">
-            <li>
-                <a href="mailto:rskkoushik@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/mail.svg" alt="mail" />
-                    <span class="contact__links__text">Mail</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/koushikrsk" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/twitter.svg" alt="twitter" />
-                    <span class="contact__links__text">Twitter</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/koushik-dev" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/github.svg" alt="github" />
-                    <span class="contact__links__text">Github</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://codepen.io/koushik27" target="_blank" rel="noopener noreferrer">
-                    <img src="./assets/codepen.png" alt="codepen">
-                    <span class="contact__links__text">Codepen</span>
-                </a>
-            </li>
-        </ul>
+        <div class="contact__wrapper">
+            <form action="https://formspree.io/xvowzybq" method="post" class="contact__form">
+                <label for="name">Name
+                    <input type="text" name="name" id="name" />
+                </label>
+                <label for="email">Email
+                    <input type="text" name="email" id="email" />
+                </label>
+                <label for="description">Message
+                    <textarea name="message" id="description" cols="30" rows="10"></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+            <ul class="contact__links">
+                <li>
+                    <a href="mailto:rskkoushik@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/mail.svg" alt="mail" />
+                        <span class="contact__links__text">Mail</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/koushikrsk" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/twitter.svg" alt="twitter" />
+                        <span class="contact__links__text">Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/koushik-dev" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/github.svg" alt="github" />
+                        <span class="contact__links__text">Github</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://codepen.io/koushik27" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/codepen.png" alt="codepen">
+                        <span class="contact__links__text">Codepen</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
         <p class="contact__copy">&copy; Koushik. 2020</p>
     </div>
         
