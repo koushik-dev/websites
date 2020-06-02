@@ -113,9 +113,11 @@ html, body {
         li {
             margin: 5px 10px;
             transform: scale(0.9);
-            transition: transform 0.05s ease-in-out;
+            transition: transform 0.05s ease-in-out,
+                        box-shadow 0.05s ease-in-out;
             &:hover {
-                transform: scale(1);
+                transform: scale(0.92);
+                box-shadow: 0 15px 10px -10px #333;
             }
             img {
                 width: 35px;
@@ -207,7 +209,7 @@ html, body {
             border-radius: 5px;
             box-shadow: 0 15px 10px -10px #333;
             input, textarea {
-                background-color: #ebe9e9;
+                box-shadow: inset 0 0 2px #333;
             }
         }
         &__wrapper {

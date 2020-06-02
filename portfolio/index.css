@@ -161,15 +161,17 @@ html, body {
   margin: 5px 10px;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  -webkit-transition: -webkit-transform 0.05s ease-in-out;
-  transition: -webkit-transform 0.05s ease-in-out;
-  transition: transform 0.05s ease-in-out;
-  transition: transform 0.05s ease-in-out, -webkit-transform 0.05s ease-in-out;
+  -webkit-transition: -webkit-transform 0.05s ease-in-out, -webkit-box-shadow 0.05s ease-in-out;
+  transition: -webkit-transform 0.05s ease-in-out, -webkit-box-shadow 0.05s ease-in-out;
+  transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
+  transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out, -webkit-transform 0.05s ease-in-out, -webkit-box-shadow 0.05s ease-in-out;
 }
 
 .contact__links li:hover {
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0.92);
+          transform: scale(0.92);
+  -webkit-box-shadow: 0 15px 10px -10px #333;
+          box-shadow: 0 15px 10px -10px #333;
 }
 
 .contact__links li img {
@@ -292,7 +294,8 @@ html, body {
             box-shadow: 0 15px 10px -10px #333;
   }
   .contact__form input, .contact__form textarea {
-    background-color: #ebe9e9;
+    -webkit-box-shadow: inset 0 0 2px #333;
+            box-shadow: inset 0 0 2px #333;
   }
   .contact__wrapper {
     -webkit-box-orient: horizontal;
